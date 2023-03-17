@@ -1,6 +1,6 @@
 /* Define a fonte padrão para a página */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* Define o estilo do título principal */
@@ -19,7 +19,7 @@ form {
   background-color: #fff;
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* Define o estilo dos labels */
@@ -49,9 +49,11 @@ select {
 
 /* Define o estilo do elemento pai das checkbox */
 .checkbox-group {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 /* Define o estilo das checkbox */
@@ -81,12 +83,37 @@ select {
   background-color: #00a5a5;
 }
 
+.show-box {
+  display: flex;
+  align-items: stretch;
+  cursor: pointer; 
+}
+
+.show-box label {
+  padding-right: 10px;
+}
+
+.arrow-button::after {
+  content: '';
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 0.2rem solid currentColor;
+  border-right: 0.2rem solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.arrow-button.rotate::after {
+  transform: rotate(135deg);
+}
+
 /* Define o estilo do botão submit */
 input[type="submit"] {
   display: block;
   width: 100%;
   padding: 15px 30px;
-  margin-top: 30px;
+  margin-top: 20px;
   background-color: #00a5a5;
   color: #fff;
   text-align: center;

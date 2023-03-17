@@ -25,6 +25,10 @@
         <option value="{{ c }}">{{ c }}</option>
         {% endfor %}
       </select>
+      <div class="show-box" >
+        <label for="show-box">Options</label><a id="show-options" class="arrow-button"></a>
+      </div>
+      <br />
       <div class="checkbox-group">
         <div class="checkbox">
           <label for="excluir_cve">Excluir "CVEs"?:</label>
@@ -43,7 +47,18 @@
           <input type="checkbox" name="only_dh" id="only_dh" />
         </div>
       </div>
+      <br />
       <input type="submit" value="Enviar" />
     </form>
+    <script>
+      const showOptionsButton = document.getElementById("show-options");
+      const checkboxGroup = document.querySelector(".checkbox-group");
+
+      showOptionsButton.addEventListener("click", function () {
+        checkboxGroup.style.display =
+          checkboxGroup.style.display === "grid" ? "none" : "grid";
+        showOptionsButton.classList.toggle("rotate");
+      });
+    </script>
   </body>
 </html>
