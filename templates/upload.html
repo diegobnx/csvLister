@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Upload de arquivo CSV</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Vulnerabilidades</h1>
+    <form
+      action="{{ url_for('upload') }}"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <label for="file">Selecione um arquivo CSV:</label>
+      <input type="file" name="file" id="file" />
+      <br />
+      <label for="cliente">Selecione um cliente:</label>
+      <select name="cliente" id="cliente">
+        {% for c in clientes %}
+        <option value="{{ c }}">{{ c }}</option>
+        {% endfor %}
+      </select>
+      <div class="checkbox-group">
+        <div class="checkbox">
+          <label for="excluir_cve">Excluir "CVEs"?:</label>
+          <input type="checkbox" name="excluir_cve" id="excluir_cve" />
+        </div>
+        <div class="checkbox">
+          <label for="excluir_dh">Excluir "Dead Hosts"?:</label>
+          <input type="checkbox" name="excluir_dh" id="excluir_dh" />
+        </div>
+        <div class="checkbox">
+          <label for="only_cve">Somente "CVEs"?:</label>
+          <input type="checkbox" name="only_cve" id="only_cve" />
+        </div>
+        <div class="checkbox">
+          <label for="only_dh">Somente "Dead Hosts"?:</label>
+          <input type="checkbox" name="only_dh" id="only_dh" />
+        </div>
+      </div>
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+/* Define a fonte padrão para a página */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Define o estilo do título principal */
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  margin: 50px 0;
+}
+
+/* Define o estilo do formulário */
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+}
+
+/* Define o estilo dos labels */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Define o estilo do input file */
+input[type="file"] {
+  margin-bottom: 20px;
+}
+
+/* Define o estilo do select */
+select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Define o estilo do elemento pai das checkbox */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Define o estilo das checkbox */
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox label {
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  appearance: none;
+  border: 2px solid #00a5a5;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"]:checked {
+  background-color: #00a5a5;
+}
+
+/* Define o estilo do botão submit */
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 15px 30px;
+  margin-top: 30px;
+  background-color: #00a5a5;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Define o estilo hover para o botão submit */
+input[type="submit"]:hover {
+  background-color: #007d7d;
+}
+
+/* Define os estilos para telas menores que 600px */
+@media screen and (max-width: 600px) {
+  form {
+    padding: 20px;
+  }
+
+  input[type="submit"] {
+    padding: 10px 20px;
+  }
+}
+
+/* Define os estilos para telas maiores que 2000px */
+@media screen and (min-width: 2000px) {
+  form {
+    max-width: 1600px;
+  }
+}

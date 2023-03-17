@@ -1,0 +1,95 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos para a tabela de resultados */
+.results-table {
+  margin: 0 auto;
+  max-width: 600px;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.results-table th,
+.results-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.results-table th {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+/* Estilos para a tabela de resultados */
+.results-table {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.results-table th,
+.results-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.results-table th {
+  background-color: #4caf50;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.results-table td {
+  font-size: 16px;
+}
+
+.back-button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #3e8e41;
+}
+
+
+/* Responsividade */
+@media only screen and (max-width: 768px) {
+  .results-table {
+    margin: 0;
+    width: 100%;
+  }
+  
+  .results-table th,
+  .results-table td {
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .results-table th {
+    font-size: 12px;
+  }
+}

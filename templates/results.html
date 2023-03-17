@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resultados</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/results.css') }}"
+    />
+  </head>
+  <body>
+    <div class="back-button-container">
+      <a href="/" class="back-button">Voltar</a>
+    </div>
+    {% if results %}
+    <table class="results-table">
+      <tr>
+        {% for header in results[0] %}
+        <th>{{ header }}</th>
+        {% endfor %}
+      </tr>
+      {% for row in results[1:] %}
+      <tr>
+        {% for cell in row %}
+        <td>{{ cell }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+    <p>Nenhum resultado encontrado para o cliente selecionado.</p>
+    {% endif %}
+  </body>
+</html>
